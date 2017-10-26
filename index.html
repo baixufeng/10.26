@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src='https://cdn.bootcss.com/jquery/3.2.1/jquery.js'></script>
+    </head>
+    <body>
+    </body>
+</html>
+<script type="text/javascript">
+    $.ajax({
+        url:'http://localhost:3000/',
+        type:'POST',
+        success:function(e){
+            for(var i in e){
+                $('body').append('<p>'+e[i].id+e[i].name+e[i].age+'</p>')
+            }
+        }
+    })
+</script>
